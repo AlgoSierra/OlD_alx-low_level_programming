@@ -22,8 +22,8 @@ int main(void)
 
 			if (i != 99 || j != 99)
 			{
-				putchar(' ');
 				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
