@@ -10,8 +10,9 @@ int main(void)
 {
 	int i = 1024;
 	int j = 0;
+	int k;
 
-	for (int k = 1; k < i; k++)
+	for (k = 1; k < i; k++)
 	{
 		if (k % 3 == 0 || k % 5 == 0)
 		{
