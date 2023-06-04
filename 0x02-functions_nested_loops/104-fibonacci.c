@@ -19,7 +19,7 @@ int main(void)
 	{
 		unsigned int nextTerm = term1 + term2;
 
-		printf(", %u", nextTerm);
+		printf(",%u ", nextTerm);
 		term1 = term2;
 		term2 = nextTerm;
 	}
