@@ -8,11 +8,16 @@
 
 int main(void)
 {
-	int i, j;
+	int i = 1024;
+	int j = 0;
 
-	for (i = 0; i < 1024; i++)
-		if (i % 3 == 0 || i % 5 == 0)
-			j++;
+	for (int k = 1; k < i; k++)
+	{
+		if (k % 3 == 0 || k % 5 == 0)
+		{
+			j += k;
+		}
+	}
 	printf("%d\n", j);
 	return (0);
 }
