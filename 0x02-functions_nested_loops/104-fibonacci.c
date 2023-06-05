@@ -10,26 +10,47 @@ int main(void)
 {
 	int count;
 
-	unsigned int term1 = 1;
-	unsigned int term2 = 2;
+	unsigned long int a, b, c;
+	unsigned long int x, y, z, carry;
 
-	printf("%u, %u, ", term1, term2);
+	count = 0;
+	a = 0;
+	b = 1;
 
-	for (count = 3; count <= 98; count++)
+	for (count = 1; count <= 91; count++)
 	{
-		unsigned int nextTerm = term1 + term2;
-
-		term1 = term2;
-		term2 = nextTerm;
-
-		printf("%u", nextTerm);
-
-		if (count < 98)
+		c = a + b;
+		a = b;
+		b = c;
+		printf("%lu, ", c);
+	}
+	x = a % 1000;
+	a = a / 1000;
+	y = b % 1000;
+	b = b / 1000;
+	while (count <= 98)
+	{
+		carry = (x + y) / 1000;
+		z = (x + y) - carry * 1000;
+		c = (a + b) + carry;
+		x = y;
+		y = z;
+		a = b;
+		b = c;
+		if (z >= 100)
+		{
+			printf("%lu%lu", c, z);
+		}
+		else
+		{
+			printf("%lu0%lu", c, z);
+		}
+		if (count != 98)
 		{
 			printf(", ");
 		}
+		count++;
 	}
-
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
