@@ -38,17 +38,11 @@ int main(void)
 		a = b;
 		b = c;
 		if (z >= 100)
-		{
 			printf("%lu%lu", c, z);
-		}
 		else
-		{
 			printf("%lu0%lu", c, z);
-		}
 		if (count != 98)
-		{
 			printf(", ");
-		}
 		count++;
 	}
 	putchar('\n');
